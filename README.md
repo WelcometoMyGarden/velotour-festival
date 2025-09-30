@@ -1,9 +1,12 @@
-The website for the VeloTour Festival, https://velotourfestival.be/.
+The website for the WTMG Tour Festival.
 
 Deployed using GitHub Pages from the root of the main branch.
 
-For development, run `npm install && npm start` in a suitable environment to run
-a live-updating server that will serve the static HTML.
+For the first development setup, run `npm install`.
+
+To preview your changes, run `npm start` in a Terminal to start the Astro live server. In VSCode, you can also go to Terminal -> Run Build Task in the top menu for the same effect.
+
+This will start a preview server that you can access at [http://localhost:4321/](http://localhost:4321/).
 
 Opening this repository in CodeSandbox automates the above (see
 `.codesandbox/tasks.json`). From there, Pull Requests can be sent for merging

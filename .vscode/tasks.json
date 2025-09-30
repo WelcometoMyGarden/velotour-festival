@@ -2,18 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run static web server",
-      "type": "shell",
-      "command": "python3 -m http.server",
-      "problemMatcher": [],
-      "group": "build"
-    },
-    {
       "type": "npm",
       "script": "start",
       "problemMatcher": [],
       "label": "npm: start",
-      "detail": "live-server",
+      "detail": "astro live server",
       "group": {
         "kind": "build",
         "isDefault": true
