@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>WTMG Tour Festival</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta property="og:title" content="WTMG Tour Festival" />
+        {/* Dynamic meta tags, fallback content */}
+        <slot name="meta" />
+        <meta property="og:image" content="images/WTMG-tourfestival-logo.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="WTMG Tour Festival" />
+        <meta name="twitter:site:id" content="@DVRansbeeck" />
+        <meta name="twitter:title" content="WTMG Tour Festival" />
+        <meta
+            name="twitter:image"
+            content="https://github.com/VeloTourFestival/velotourfestival/blob/master/images/Velotourfestival-logo.png?raw=true"
+        />
+        <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+        <link rel="icon" href="/images/favicon-180.png" sizes="180x180" />
+        <link rel="icon" href="/images/favicon-196.png" sizes="196x196" />
+        <link
+            rel="alternate"
+            href="https://velotourfestival.be"
+            hreflang="x-default"
+        />
+        <link
+            rel="alternate"
+            href="https://velotourfestival.be"
+            hreflang="en"
+        />
+        <link
+            rel="alternate"
+            href="https://velotourfestival.be/fr"
+            hreflang="fr"
+        />
+        <link
+            rel="alternate"
+            href="https://velotourfestival.be/nl"
+            hreflang="nl"
+        />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <noscript
+            ><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript
+        >
+        <!-- Plausible start -->
+        <script
+            is:inline
+            defer
+            data-domain="velotourfestival.be"
+            src="https://visitors.slowby.travel/js/script.js"></script>
+        <!-- Plausible end -->
+    </head>
+    <body class="landing is-preload">
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+            <slot />
+        </div>
+        <!-- Scripts -->
+        <script is:inline src="/assets/js/jquery.min.js"></script>
+        <script is:inline src="/assets/js/jquery.scrollex.min.js"></script>
+        <script is:inline src="/assets/js/jquery.scrolly.min.js"></script>
+        <script is:inline src="/assets/js/browser.min.js"></script>
+        <script is:inline src="/assets/js/breakpoints.min.js"></script>
+        <script is:inline src="/assets/js/util.js"></script>
+        <script is:inline src="/assets/js/main.js"></script>
+    </body>
+</html>

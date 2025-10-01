@@ -1,0 +1,65 @@
+---
+import Stars from "../components/Stars.svelte";
+import {
+  reviewPages,
+  reviews as allReviews,
+  reviewAverage,
+} from "../lib/backend/shared";
+import { type Review as ReviewType } from "../lib/constants";
+import ReviewPages from "../components/ReviewPages.svelte";
+import { useTranslations } from "../lib/i18n/utils";
+const reviews = reviewPages[0] as ReviewType[];
+
+const t = useTranslations(Astro.url.toString());
+---
+
+<section class="wrapper style2 align-center">
+  <div class="inner">
+    <header class="major">
+      <h2 id="testimonials"><slot name="title" /></h2>
+    </header>
+    <div
+      class="rating-summary"
+      property="aggregateRating"
+      typeof="AggregateRating"
+    >
+      <div class="rating-avg">
+        <Stars client:load rating={reviewAverage} />
+        <span
+          ><span property="ratingValue">{reviewAverage.toFixed(2)}</span>/<span
+            property="bestRating">5</span
+          ></span
+        >
+        <meta property="worstRating" content="1" />
+      </div>
+      <span>•</span>
+      <span>
+        <span property="ratingCount">{allReviews.length}</span>{" "}
+        <span>{t("ratings")}</span>
+      </span>
+    </div>
+  </div>
+  <ReviewPages
+    client:visible
+    initialData={reviews}
+    totalPages={reviewPages.length}
+    url={Astro.url.toString()}
+  />
+</section>
+
+<style lang="scss">
+  @import "../sass/libs/_vars.scss";
+  @import "../sass/libs/_functions.scss";
+  .rating-summary,
+  .rating-avg {
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .rating-summary {
+    font-size: 1.2rem;
+    color: _palette(fg-light);
+  }
+</style>
