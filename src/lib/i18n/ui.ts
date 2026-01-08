@@ -2,13 +2,13 @@
 // import fr from "../../locales/fr.json";
 // import nl from "../../locales/nl.json";
 const en = {
-  "ratings": "ratings"
+  "ratings": "experiences shared"
 }
 const fr = {
-  "ratings": "avis"
+  "ratings": "expériences partagées"
 }
 const nl = {
-  "ratings": "beoordelingen"
+  "ratings": "ervaringen gedeeld"
 }
 
 export const languages = {
