@@ -66,6 +66,7 @@
     padding: 1rem;
     border-radius: 1rem;
     border: 1px solid _palette(border);
+    background-color: #3d4a57;
 
     p {
       margin-bottom: 0.5rem;

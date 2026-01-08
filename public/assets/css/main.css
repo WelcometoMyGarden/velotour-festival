@@ -3770,21 +3770,21 @@ body.is-menu-visible #menu {
 }
 
 .banner__logo {
-	max-width: 350px;
-	width: min(350px, 60vw);
-	margin: 0 auto 1rem auto;
+	/* Avoid too big logo on mobile */
+	max-width: 60vw;
+	margin: 1rem auto;
+	width: 100%;
+	/* This is required for the child image to not define the min-height of this */
+	min-height: 130px;
+	flex-basis: 350px;
 }
 
 .banner__logo img {
+	height: 100%;
 	width: 100%;
 	object-fit: contain;
 }
 
-@media only screen and (max-width: 600px) {
-	/* .banner__logo {
-		width: 50%;
-	} */
-}
 
 #banner h2 {
 	-moz-transform: scale(1);
@@ -3834,6 +3834,10 @@ body.is-menu-visible #menu {
 #banner p {
 	letter-spacing: 0.225em;
 	text-transform: uppercase;
+}
+
+#banner .register-now {
+	margin-bottom: 1.4rem;
 }
 
 #banner p a {
@@ -3910,9 +3914,14 @@ body.is-menu-visible #menu {
 @media screen and (max-width: 736px) {
 
 	#banner {
-		padding: 7em 3em 5em 3em;
+		padding: 1rem 3em 3em 3em;
 		height: auto;
 		min-height: 0;
+	}
+
+	#banner .banner__logo {
+		flex-basis: 250px;
+		margin-bottom: 1.6rem;
 	}
 
 	#banner h2 {

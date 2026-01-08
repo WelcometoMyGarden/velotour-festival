@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ReviewsSection from "../lib/ReviewsSection.astro";
+import BackgroundVideo from "../components/BackgroundVideo.svelte";
 ---
 
 <Layout>
@@ -62,22 +63,7 @@ import ReviewsSection from "../lib/ReviewsSection.astro";
 
   <!-- Banner -->
   <section id="banner">
-    <video
-      class="bg-video bg-video--desktop"
-      alt="A background video trailer for the Velotour Festival"
-      preload="auto"
-      muted=""
-      loop=""
-      autoplay=""
-      playsinline="true"
-      isbgvideo="true"
-    >
-      <source
-        type="video/mp4"
-        src="https://storage.googleapis.com/wtmg-static/velotour/velotour_homepage_2000_3.mp4"
-      />
-      <button class="id">Play</button>
-    </video>
+    <BackgroundVideo client:only="svelte" />
     <div class="banner__logo">
       <img
         src="./images/Velotourfestival-logo.png"
@@ -92,7 +78,7 @@ import ReviewsSection from "../lib/ReviewsSection.astro";
         <!-- crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>-->
       </p>
     </div>
-    <ul class="actions special">
+    <ul class="actions special register-now">
       <li>
         <a
           href="https://register.velotourfestival.be/fr"
@@ -101,7 +87,7 @@ import ReviewsSection from "../lib/ReviewsSection.astro";
         >
       </li>
     </ul>
-    <p>
+    <p class="favourite-weekend">
       "Mon week-end préféré de l'année !"<br />
     </p>
     <a href="#one" class="more scrolly">En savoir plus</a>
