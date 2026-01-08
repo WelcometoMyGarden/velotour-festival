@@ -1,4 +1,4 @@
-The website for the WTMG Tour Festival.
+The website for the Velotour Festival.
 
 Deployed using GitHub Pages from the root of the main branch.
 
